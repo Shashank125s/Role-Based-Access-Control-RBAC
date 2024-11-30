@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-r from-indigo-500 to-blue-600">
+
+    <div class="w-full h-screen flex justify-center items-center bg-cover bg-center p-6">
+        <div class="bg-zinc-800 p-8 rounded-lg shadow-lg w-full max-w-md">
+            <h3 class="text-4xl text-center text-white mb-6">Create an Account</h3>
+
+            <form method="post" action="/register" class="space-y-6">
+                <div class="flex flex-col">
+                    <label for="username" class="text-white mb-2">Username</label>
+                    <input class="px-4 py-2 rounded-md bg-transparent border-2 border-zinc-700 text-white outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500" 
+                        type="text" placeholder="Enter Username" name="username" required>
+                </div>
+
+                <div class="flex flex-col">
+                    <label for="password" class="text-white mb-2">Password</label>
+                    <input class="px-4 py-2 rounded-md bg-transparent border-2 border-zinc-700 text-white outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500" 
+                        type="password" placeholder="Enter Password" name="password" required>
+                </div>
+                
+                <input class="px-3 py-2 rounded-md bg-transparent border-2 border-zinc-700 text-white outline-none w-full"
+                       type="email" name="email" placeholder="Email" required>
+
+                <div class="flex flex-col">
+                    <label for="role" class="text-white mb-2">Select Role</label>
+                    <select class="px-4 py-2 rounded-md bg-transparent border-2 border-zinc-700 text-white outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500" name="role">
+                        <option class="text-black" value="user">User</option>
+                        <option class="text-black" value="moderator">Moderator</option>
+                        <option class="text-black" value="admin">Admin</option>
+                    </select>
+                </div>
+
+                <div class="flex justify-center">
+                    <input class="px-4 py-2 rounded-md bg-blue-600 text-white cursor-pointer hover:bg-blue-700 transition-all duration-300" 
+                        type="submit" value="Create User">
+                </div>
+            </form>
+
+            <div class="text-center mt-6">
+                <p class="text-white">Already have an account? <a href="/login" class="text-blue-400 hover:underline">Login here</a></p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

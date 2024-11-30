@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-r from-blue-500 to-indigo-600">
+
+    <div class="w-full h-screen flex justify-center items-center bg-cover bg-center p-6">
+        <div class="bg-zinc-800 p-8 rounded-lg shadow-xl w-full max-w-lg">
+            <h3 class="text-4xl text-center text-white mb-4">
+                Welcome, <%= user.username %>!
+            </h3>
+            <p class="text-center text-white text-xl mb-6">You are logged in as: <%= user.role %></p>
+
+            <div class="mb-4">
+                <a href="/userResource" class="text-white block text-xl p-3 rounded-md bg-blue-600 hover:bg-blue-700 transition-all duration-300">
+                    User Resource
+                </a>
+            </div>
+
+            <% if (user.role === 'moderator' || user.role === 'admin') { %>
+                <div class="mb-4">
+                    <a href="/moderatorResource" class="text-white block text-xl p-3 rounded-md bg-blue-600 hover:bg-blue-700 transition-all duration-300">
+                        Moderator Resource
+                    </a>
+                </div>
+            <% } %>
+
+            <% if (user.role === 'admin') { %>
+                <div class="mb-4">
+                    <a href="/adminResource" class="text-white block text-xl p-3 rounded-md bg-blue-600 hover:bg-blue-700 transition-all duration-300">
+                        Admin Resource
+                    </a>
+                </div>
+            <% } %>
+
+            <a href="/logout" class="inline-block px-6 py-3 bg-gray-600 rounded-md text-white font-medium hover:bg-gray-700 transition-all">
+                Logout
+            </a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

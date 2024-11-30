@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Resources</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-white">
+
+    <div class="min-h-screen flex items-center justify-center">
+        <div class="bg-zinc-800 p-10 rounded-xl shadow-lg max-w-2xl w-full text-center">
+            <h1 class="text-4xl font-bold mb-6 text-green-400">Hello, <%= user.username %>!</h1>
+
+            <p class="text-xl mb-6 text-gray-300">Welcome to the admin dashboard. Here, you have full control and access to all resources.</p>
+            
+            
+            <div class="grid grid-cols-2 gap-4 mb-6">
+                <a href="/userResource" class="block px-6 py-3 bg-blue-500 rounded-md text-white font-medium hover:bg-blue-600 transition-all">
+                    User Resources
+                </a>
+                <a href="/moderatorResource" class="block px-6 py-3 bg-blue-500 rounded-md text-white font-medium hover:bg-blue-600 transition-all">
+                    Moderator Resources
+                </a>
+                <a href="/adminResource" class="block px-6 py-3 bg-red-500 rounded-md text-white font-medium hover:bg-red-600 transition-all">
+                    Admin Resources
+                </a>
+                <% if (user.role === 'admin') { %>
+                    <a href="/activityLogs" class="block px-6 py-3 bg-purple-500 rounded-md text-white font-medium hover:bg-purple-600 transition-all">
+                        View Activity Logs
+                    </a>
+                <% } %>
+            <a href="/admin/viewUsers" class="inline-block px-6 py-3 bg-yellow-500 rounded-md text-white font-medium hover:bg-yellow-600 transition-all">View All Users and Moderators</a>
+
+            </div>
+            <a href="/dashboard"  class="inline-block px-6 py-3 bg-gray-600 rounded-md text-white font-medium hover:bg-gray-700 transition-all">
+                Back to  Dashboard
+            </a>
+            <a href="/logout" class="inline-block px-6 py-3 bg-gray-600 rounded-md text-white font-medium hover:bg-gray-700 transition-all">
+                Logout
+            </a>
+            
+        </div>
+    </div>
+
+</body>
+</html>
