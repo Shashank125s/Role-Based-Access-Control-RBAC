@@ -2,14 +2,6 @@
 
 This project implements a **Role-Based Access Control (RBAC)** system with user authentication and authorization using **Node.js**, **Express**, **MongoDB**, and **EJS**. The application features multiple user roles, including **User**, **Moderator**, and **Admin**, each with specific access privileges.
 
-## Table of Contents
-
-- [Technologies Used](#technologies-used)
-- [Features](#features)
-- [Tech Stack](#tech-stack)
-- [Installation](#installation)
-- [Routes](#routes)
-- [User Roles & Permissions](#user-roles--permissions)
 
 ---
 
@@ -66,14 +58,7 @@ This application utilizes the following technologies:
 
 ---
 
-## Installation
 
-### 1. Clone the Repository
-
-```bash
-git clone https://github.com/yourusername/rbac-application.git
-cd rbac-application
-```
 
 Application Structure
 ```
